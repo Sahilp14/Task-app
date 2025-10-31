@@ -89,8 +89,8 @@ data = load_data()
 if data.empty:
     st.warning("⚠️ No data loaded. Ensure all CSV files are in the same folder as main.py.")
 else:
-    st.success(f"✅ Data loaded successfully! {len(data)} rows available.")
-    st.dataframe(data.head())
+    #st.success(f"✅ Data loaded successfully! {len(data)} rows available.")
+    #st.dataframe(data.head())
 
     user_query = st.text_input("💬 Ask about properties (e.g., 'Show me 2BHK in Pune under 50L'):").strip()
 
@@ -122,3 +122,4 @@ else:
                 st.write(reply if reply else "Sorry, I couldn’t find anything relevant right now.")
             except Exception as e:
                 st.error(f"Error generating response: {e}")
+
